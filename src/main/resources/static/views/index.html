@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Main Page</title>
+</head>
+<body ng-app="patientInfoUIApp">
+<hr/>
+<div class="container" ng-controller="PatientBloodSugarInfoController">
+    <div class="row" ng-repeat="patientBloodSugarInfo in allPatientBloodSugarInfo">
+        <div class="">
+            <h3>{{patientBloodSugarInfo.id}}</h3>
+            <span class="spacing">{{patientBloodSugarInfo.bloodsugarlevel}}</span>
+            <span class="spacing">{{patientBloodSugarInfo.recorded_at}}</span>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/PatientBloodSugarInfoController.js"></script>
+<script src="js/app/PatientBloodSugarInfoService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/app/app.css"/>
+</html>
